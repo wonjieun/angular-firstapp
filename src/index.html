@@ -1,11 +1,24 @@
+<!-- index.html은 외부 라이브러리 (bootstrap, fonts 등)를 넣는 용도 외에는 수정할 일 X-->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>AngularFirstapp</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--cdn 사용-->
+  <script src="https://unpkg.com/systemjs/dist/system.js"></script>
+  <script>
+    SystemJS.config({
+      baseURL: '/angular-firstapp/src/module',
+      traspiler: 'plugin-babel',
+      map : {
+        'plugin-babel': 'http://unpkg.com/systemjs-plugin-babel/plugin-babel.js',
+        'systemjs-babel-build': 'http://unpkg.com/systemjs-plugin-babel/systemjs-babel-browser.js'
+      }
+    });
+    SystemJS.import('main.js');
+  </script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>

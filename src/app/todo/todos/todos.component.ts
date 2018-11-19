@@ -7,7 +7,6 @@ import { Todo } from '../share/todo.model';
  */
 // @Component: Component decorator
 @Component({
-  // <app-todos></app-todos>
   selector: 'app-todos',
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css']
@@ -15,6 +14,7 @@ import { Todo } from '../share/todo.model';
 export class TodosComponent implements OnInit {
   newText = '';
   todos: Todo[];
+  today: Date = new Date();
 
   constructor() {
     this.todos = [

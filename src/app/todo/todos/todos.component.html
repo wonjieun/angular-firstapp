@@ -1,12 +1,16 @@
 <div class="title">
   <h1>나의 하루</h1>
-  <h2>11월 7일</h2>
+  <h2>{{ today | date:"yyyy년 M월 d일" }}</h2>
 </div>
 <div>
+  <!-- [todo] 속성 바인딩 -->
+  <!-- todo 컴포넌트에서 @Input을 통해 todo 속성을 사용할 수 있게 처리-->
   <div *ngFor="let todo of todos" (click)="toggleTodo(todo)">
     <app-todo [todo]="todo"></app-todo>
   </div>
+
 </div>
 <div>
+  <!-- (TodoAdded) 이벤트 바인딩-->
   <app-add-todo (TodoAdded)="addTodo($event)"></app-add-todo>
 </div>

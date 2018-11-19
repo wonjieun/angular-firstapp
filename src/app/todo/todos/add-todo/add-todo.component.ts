@@ -14,6 +14,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   selector: 'app-add-todo',
   // --inline-template
   template: `
+    <!-- [(ngModel)]: 양방향 바인딩 -->
     <input type="text" placeholder="할 일 추가" [(ngModel)]="newText" />
     <button (click)="addTodo(newText)">Add</button>
   `,
@@ -22,6 +23,9 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class AddTodoComponent implements OnInit {
 
+  // @Output: 이벤트를 정의
+  // EventEmitter(): 자식 컴포넌트의 특정 이벤트와 데이터를 발생시켜
+  //                 부모 컴포넌트에서 처리 가능
   @Output() TodoAdded = new EventEmitter();
   newText: string;
 
