@@ -1,11 +1,14 @@
 <div class="title">
   <h1>나의 하루</h1>
+  <!-- interpolation : today라는 이름의 Component의 속성을 찾아-->
+  <!-- 그 값을 View에 표현 (단방향 바인딩1)-->
   <h2>{{ today | date:"yyyy년 M월 d일" }}</h2>
 </div>
 <div>
-  <!-- [todo] 속성 바인딩 -->
-  <!-- todo 컴포넌트에서 @Input을 통해 todo 속성을 사용할 수 있게 처리-->
+  <!-- (click) 이벤트 바인딩 (단방향 바인딩2)-->
   <div *ngFor="let todo of todos" (click)="toggleTodo(todo)">
+    <!-- [todo] 속성 바인딩 (단방향 바인딩3) -->
+    <!-- todo 컴포넌트에서 @Input을 통해 todo 속성을 사용할 수 있게 처리-->
     <app-todo [todo]="todo"></app-todo>
   </div>
 
