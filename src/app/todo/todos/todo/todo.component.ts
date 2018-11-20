@@ -17,7 +17,8 @@ import { Todo } from '../../share/todo.model';
 })
 export class TodoComponent implements OnInit {
 
-  // @Input: 부모 컴포넌트 데이터를 전달
+  // @Input: component간에 값을 전달할 수 있게 해주는 decorator
+  // @Input: 부모 컴포넌트 데이터를 전달 받음
   // todo는 Todo라는 Model의 속성을 가지고 있다.
   @Input() todo: Todo;
 

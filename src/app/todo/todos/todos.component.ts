@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../share/todo.model';
-
 /**
  * @description
  * 할 일 목록, 할 일 추가 전체 컴포넌트

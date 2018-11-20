@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+/* [(ngModel)] directive를 제공하는 FormsModule */
 import { FormsModule } from '@angular/forms';
 import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todos/todo/todo.component';

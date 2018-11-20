@@ -6,6 +6,7 @@
 </div>
 <div>
   <!-- (click) 이벤트 바인딩 (단방향 바인딩2)-->
+  <!-- *ngFor="let 반복에사용될변수명 of 배열"-->
   <div *ngFor="let todo of todos" (click)="toggleTodo(todo)">
     <!-- [todo] 속성 바인딩 (단방향 바인딩3) -->
     <!-- todo 컴포넌트에서 @Input을 통해 todo 속성을 사용할 수 있게 처리-->

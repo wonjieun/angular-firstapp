@@ -36,6 +36,7 @@ export class AddTodoComponent implements OnInit {
 
   // 할 일 추가 button event
   addTodo(newText: string) {
+    // Typescript에서 this는 class 자체를 나타냄
     this.TodoAdded.emit(newText);
     this.newText = '';
   }
